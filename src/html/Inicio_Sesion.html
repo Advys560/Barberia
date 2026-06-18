@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesion | Barbery Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/Inicio_Sesion.css">
+    <link rel="shortcut icon" href="../assets/imgs/barberia.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imgs/barberia.png" alt="Logo Barber Solutions">
+                <h2>Barbery Solutions</h2>
+            </div>
+            <div class="navbar-buttons">
+                <a href="inicio.html" class="btn-link btn-login">Volver al inicio</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="card">
+        <form>
+            <div class="campo">
+                <h2>Welcome Back</h2>
+                <p>Por favor Ingresar tus credenciales para acceder</p>
+
+                <label for="usuario">Correo</label>
+                <input type="text" id="usuario" placeholder="name@example.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="password">Contraseña</label>
+
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <button type="button" id="mostrarPassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn1">Iniciar Sesión</button>
+            <div class="raya"></div>
+            <p>¿No tienes una cuenta? <a href="registros.html">Registrate</a></p>
+        </form>
+    </div>
+    <footer>
+        <section class="footer-brand">
+            <div class="logo-container">
+                <img src="../assets/imgs/barberia.png" alt="Logo">
+                <h1>Barbery Solution</h1>
+            </div>
+            <span>&copy; 2026 Barbery Solution. Todos los derechos reservados</span>
+        </section>
+        <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+    <script type="module" src="../js/views/Sesion.js"></script>
+</body>
+
+</html>

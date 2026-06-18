@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas - Barbery Solution</title>
+    <link rel="stylesheet" href="../css/citas.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Reserva tu Experiencia</h1>
+        <p>Selecciona detalladamente tu servicio para asegurar un espacio<br> en nuestra agenda de Barbery Solution</p>
+    </section>
+
+
+    <section class="servicio">
+        <span><span>1</span> Selecciona tu Servicio</span>
+        <div>
+            <div id="lista-servicios">
+                <div class="servicio-card" data-id="1" data-nombre="Corte Clásico" data-precio="35">
+                    <h3>Corte Clásico <span>$35</span></h3>
+                    <p>Corte de cabello tradicional con terminación a navaja y masaje capilar revitalizante</p>
+                </div>
+                <div class="servicio-card" data-id="2" data-nombre="Perfilado de Barba" data-precio="25">
+                    <h3>Perfilado de Barba <span>$25</span></h3>
+                    <p>Esculpido preciso, toalla caliente y aceites esenciales premium para un mejor acabado.</p>
+                </div>
+                <div class="servicio-card" data-id="3" data-nombre="Combo Golden" data-precio="50">
+                    <h3>Combo Golden <span>$50</span></h3>
+                    <p>Nuestro servicio insignia: Corte premium + cuidado de barba completo + tratamiento capilar.</p>
+                </div>
+                <div class="servicio-card" data-id="4" data-nombre="Afeitado de Lujo" data-precio="30">
+                    <h3>Afeitado de Lujo <span>$30</span></h3>
+                    <p>Experiencia relajante con toallas calientes, espuma artesanal y afeitado tradicional.</p>
+                </div>
+            </div>
+
+            <aside id="resumen-cita">
+                <h3>Resumen de cita</h3>
+                <hr>
+                <p id="resumen-servicio">Selecciona un servicio para comenzar...</p>
+                <p id="resumen-barbero" style="display:none"></p>
+                <p id="resumen-fecha"   style="display:none"></p>
+                <p id="resumen-hora"    style="display:none"></p>
+                <button id="btn-confirmar" disabled>Confirmar cita</button>
+            </aside>
+        </div>
+    </section>
+
+    <!-- PASO 2: BARBEROS -->
+    <section class="barberos">
+        <span><span>2</span> Elige tu Barbero</span>
+        <div id="lista-barberos">
+            <div class="barbero-card" data-id="1" data-nombre="Messi">
+                <img src="https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg" alt="Messi">
+                <h3>Messi</h3>
+                <p>Experto en Cortes Clásicos</p>
+                <button class="btn-barbero">Seleccionar Barbero</button>
+            </div>
+            <div class="barbero-card" data-id="2" data-nombre="Cristiano">
+                <img src="https://assets.realmadrid.com/is/image/realmadrid/1330603286208?$Mobile$&fit=wrap&wid=312" alt="Cristiano">
+                <h3>Cristiano</h3>
+                <p>Especialista en Degradados</p>
+                <button class="btn-barbero">Seleccionar Barbero</button>
+            </div>
+            <div class="barbero-card" data-id="3" data-nombre="Yamal">
+                <img src="https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/LAMINE%20YAMAL.png" alt="Yamal">
+                <h3>Yamal</h3>
+                <p>Experto en Barbas</p>
+                <button class="btn-barbero">Seleccionar Barbero</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASO 3: FECHA Y HORA -->
+    <section class="cita">
+        <span><span>3</span> Selecciona Fecha y Hora</span>
+
+        <form id="appointment-form">
+            <div class="booking-container">
+                <div class="calendar-box">
+                    <div class="calendar-header">
+                        <span class="month-year" id="calendar-title"></span>
+                        <div class="calendar-nav">
+                            <button type="button" class="nav-btn" id="prev-month">&lt;</button>
+                            <button type="button" class="nav-btn" id="next-month">&gt;</button>
+                        </div>
+                    </div>
+
+                    <div class="weekdays">
+                        <div>LU</div>
+                        <div>MA</div>
+                        <div>MI</div>
+                        <div>JU</div>
+                        <div>VI</div>
+                        <div>SA</div>
+                        <div>DO</div>
+                    </div>
+
+                    <div class="days" id="calendar-days"></div>
+                </div>
+
+                <div class="hours-box"> 
+                    <h3>Horarios Disponibles</h3>
+                    <div class="hours-grid" id="hours-container">
+                        <button type="button" class="hour-btn" data-time="09:00">09:00 a.m</button>
+                        <button type="button" class="hour-btn" data-time="10:00">10:00 a.m</button>
+                        <button type="button" class="hour-btn" data-time="11:00">11:00 a.m</button>
+                        <button type="button" class="hour-btn" data-time="12:00">12:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="13:00">01:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="14:00">02:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="15:00">03:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="16:00">04:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="17:00">05:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="18:00">06:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="19:00">07:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="20:00">08:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="21:00">09:00 p.m</button>
+                        <button type="button" class="hour-btn" data-time="22:00">10:00 p.m</button>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" id="fecha" name="fecha">
+            <input type="hidden" id="hora" name="hora">
+        </form>
+    </section>
+
+    <footer>
+        <section>
+            <h1>Barbery Solution</h1>
+            <span>&copy; 2026 Barbery Solution. Todos los derechos reservados</span>
+        </section>
+        <div>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+
+</html>
