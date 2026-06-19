@@ -25,7 +25,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Hanken Grotesk', sans-serif;
-    background-image: url("../assets/imgs/fondo.jpeg");
+    background-image: url("../assets/imgs/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
 }
 
 
