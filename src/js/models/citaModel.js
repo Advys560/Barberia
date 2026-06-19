@@ -1,5 +1,4 @@
 export class Cita {
-    
   constructor() {
     this.Servicio = null;
     this.Barbero = null;

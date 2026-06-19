@@ -1,42 +1,51 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'sans-serif', Montserrat;
-}   
+}
 
-:root{
+:root {
     --color-primary: #C5A059;
-    --color-secundary: #1A1A1A;
+    --color-secondary: #1A1A1A;
     --color-tertiary: #3D2B1F;
-    --color-neutral:#E5E5E5;
-}   
+    --color-import: #aa833c;
+    --color-sub: #c7a464;
+    --color-neutral: #E5E5E5;
+    --boton: #c7a464;
+    --text-color: #E5E5E5;
+    --negro: #000000;
+}
 
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     gap: 21px;
-    background: var(--color-secundary);
+    background: var(--negro);
     padding: 120px;
-    h1{
+
+    h1 {
         color: var(--color-primary);
-        
+
     }
-    p{
-        color:#6c757d;
+
+    p {
+        color: #6c757d;
         font-size: 1rem;
     }
 }
 
-.servicio{
+.servicio {
     padding: 30px;
-    background: var(--color-secundary);
-    span{
+    background: var(--negro);
+
+    span {
         color: var(--color-primary);
         padding: 10px;
-        span{
+
+        span {
             background: var(--color-primary);
             padding: 8px;
             border-radius: 10px;
@@ -44,16 +53,19 @@
 
         }
     }
-    div{
+
+    div {
         display: flex;
         gap: 20px;
         align-items: flex-start;
         padding: 12px;
-        div{
+
+        div {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            div{
+
+            div {
                 display: flex;
                 flex-direction: column;
                 background: #2d2c2c;
@@ -61,25 +73,30 @@
                 width: calc(50% - 10px);
                 height: 130px;
                 border: 1px solid var(--color-primary);
-                transition: all 0.5s ease-in-out ;
-                h3{
+                transition: all 0.5s ease-in-out;
+
+                h3 {
                     color: var(--color-primary);
-                    span{
+
+                    span {
                         background: var(--color-tertiary);
                         border-radius: 20px;
 
                     }
                 }
-                p{
+
+                p {
                     color: var(--color-neutral);
                 }
             }
-            div:hover{
+
+            div:hover {
                 transform: translateY(-10px);
                 box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
             }
         }
-        aside{
+
+        aside {
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -90,13 +107,15 @@
             color: var(--color-neutral);
             border-radius: 8px;
             border: 1px solid var(--color-primary);
-            transition: all 0.5s ease-in-out ;
-            hr{
-                border:none;
+            transition: all 0.5s ease-in-out;
+
+            hr {
+                border: none;
                 border-top: 1px solid var(--color-primary);
                 width: 100%;
             }
-            button{
+
+            button {
                 background: #272422;
                 color: var(--color-primary);
                 padding: 12px 20px;
@@ -106,25 +125,29 @@
                 font-weight: bold;
                 transition: backgroud 0.5s ease;
             }
-            button:hover{
+
+            button:hover {
                 background: var(--color-primary);
                 color: var(--color-secundary);
             }
         }
-        aside:hover{
+
+        aside:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
         }
     }
 }
 
-.barberos{
+.barberos {
     padding: 30px;
-    background: var(--color-secundary);
-    span{
+    background: var(--negro);
+
+    span {
         color: var(--color-primary);
         padding: 10px;
-        span{
+
+        span {
             background: var(--color-primary);
             padding: 8px;
             border-radius: 10px;
@@ -132,30 +155,35 @@
 
         }
     }
-    div{
+
+    div {
         display: flex;
         justify-content: center;
         gap: 20px;
         padding: 20px;
-        div{
+
+        div {
             padding: 70px 35px;
             text-align: left;
             flex-direction: column;
-            background:#272422;
+            background: #272422;
             width: 250px;
             height: 310px;
             border-radius: 10px;
-            transition: all 0.5s ease-in-out ;
-            
+            transition: all 0.5s ease-in-out;
+
             img {
                 width: 180px;
                 height: 210px;
                 border-radius: 20px;
             }
-            h3, p {
+
+            h3,
+            p {
                 color: var(--color-primary);
             }
-            button{
+
+            button {
                 background: var(--color-tertiary);
                 color: var(--color-primary);
                 border: 1px solid var(--color-primary);
@@ -165,12 +193,14 @@
                 font-weight: bold;
                 transition: backgroud 0.5s ease;
             }
-            button:hover{
+
+            button:hover {
                 background: var(--color-primary);
                 color: var(--color-secundary);
             }
         }
-        div:hover{
+
+        div:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
         }
@@ -179,7 +209,7 @@
 
 .cita {
     padding: 30px;
-    background: var(--color-secundary);
+    background: var(--negro);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     span {
@@ -215,11 +245,12 @@
 
         /* CALENDARIO */
         .calendar-box {
-            background: #111111; /* Color oscuro profundo */
+            background: #111111;
+            /* Color oscuro profundo */
             padding: 25px;
             border-radius: 20px;
             width: 320px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 
             .calendar-header {
                 display: flex;
@@ -238,11 +269,15 @@
                     cursor: pointer;
                     padding: 5px 10px;
                     transition: color 0.2s;
-                    &:hover { color: var(--color-primary); }
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
                 }
             }
 
-            .weekdays, .days {
+            .weekdays,
+            .days {
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
                 text-align: center;
@@ -330,7 +365,8 @@
     }
 }
 
-footer{
+/*
+footer {
     padding: 40px;
     background: #2e3337;
     box-sizing: border-box;
@@ -340,25 +376,29 @@ footer{
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    h1{
+
+    h1 {
         color: var(--color-primary);
         padding: 15px;
     }
-    span{
+
+    span {
         color: var(--color-primary);
         padding: 15px;
     }
-    div{
+
+    div {
         display: flex;
-        gap: 18px; 
-        margin-top: 5px; 
-        
+        gap: 18px;
+        margin-top: 5px;
+
         a {
-            text-decoration: none; 
+            text-decoration: none;
+
             i {
-               
-                color: var(--color-primary); 
-                font-size: 22px; 
+
+                color: var(--color-primary);
+                font-size: 22px;
                 transition: transform 0.2s ease, color 0.2s ease;
             }
 
@@ -369,3 +409,4 @@ footer{
         }
     }
 }
+    */

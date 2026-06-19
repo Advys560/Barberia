@@ -72,20 +72,7 @@ form {
     border-color: var(--color-import);
 }
 
-.terminos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.terminos input {
-    width: auto;
-}
-
-.terminos label {
-    color: var(--color-neutral);
-}
 
 input[type="submit"] {
     width: 100%;
@@ -108,6 +95,7 @@ input[type="submit"]:hover {
     .main-registro h1 {
         font-size: 2rem;
     }
+
     form {
         padding: 25px 20px;
     }
