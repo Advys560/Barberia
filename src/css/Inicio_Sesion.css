@@ -213,25 +213,6 @@ input:focus {
     background-color: var(--color-import);
 }
 
-.terminos {
-    display: flex;
-    align-items: center;
-    /* centra verticalmente */
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.terminos label {
-    margin: 0;
-    /* elimina el margen inferior que tienen todos los label */
-    color: var(--color-neutral);
-}
-
-.terminos input {
-    width: auto;
-}
-
-
 /* =========================
    DIVISOR
 ========================= */
@@ -311,37 +292,22 @@ footer {
     color: var(--color-primary);
 }
 
-/* Redes Sociales */
 .footer-socials {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .footer-socials a {
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     text-decoration: none;
-    border-radius: 50%;
-    background-color: rgba(197, 160, 89, 0.1);
-
-    transition: all 0.3s ease;
 }
 
 .footer-socials a i {
-    font-size: 20px;
     color: var(--color-primary);
-}
-
-.footer-socials a:hover {
-    background-color: var(--color-primary);
+    font-size: 22px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .footer-socials a:hover i {
-    color: var(--color-secondary);
+    filter: brightness(1.2);
+    transform: scale(1.15);
 }

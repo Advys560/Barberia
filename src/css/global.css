@@ -13,12 +13,13 @@ body {
 
 :root {
     --color-primary: #C5A059;
-    --color-secundary: #1A1A1A;
+    --color-secondary: #1A1A1A;
     --color-tertiary: #3D2B1F;
     --color-import: #aa833c;
     --color-sub: #c7a464;
     --color-neutral: #E5E5E5;
     --boton: #c7a464;
+    --text-color: #E5E5E5;
 }
 
 header .navbar {
@@ -37,7 +38,7 @@ header .navbar {
 }
 
 .logo-container img {
-    height: 45px; 
+    height: 45px;
     width: auto;
     object-fit: contain;
 }
@@ -58,7 +59,7 @@ header .navbar {
 }
 
 .link-item {
-    color: var(--color-neutral); 
+    color: var(--color-neutral);
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -107,31 +108,49 @@ header .navbar {
 }
 
 footer {
-    padding: 40px 5%;
-    background: var(--color-secundary);
     width: 100%;
+    box-sizing: border-box;
+    padding: 40px 5%;
+    margin-top: 60px;
+
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+
+    background-color: var(--color-secondary);
+    border-top: 2px solid var(--color-primary);
+    height: 120px;
 }
 
+/* Marca */
 .footer-brand {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.footer-brand h1 {
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    margin: 0;
+    gap: 12px;
 }
 
 .footer-brand span {
+    font-size: 0.9rem;
     color: var(--color-neutral);
-    font-size: 0.85rem;
+}
+
+/* Logo Footer */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 35px;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-primary);
 }
 
 .footer-socials {
@@ -146,15 +165,31 @@ footer {
 .footer-socials a i {
     color: var(--color-primary);
     font-size: 22px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .footer-socials a:hover i {
     filter: brightness(1.2);
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
-    header .navbar { flex-direction: column; gap: 15px; }
-    footer { flex-direction: column; text-align: center; }
-    .logo-container { justify-content: center; }
-    .navbar-buttons { width: 100%; justify-content: center; }
+    header .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        justify-content: center;
+    }
 }
