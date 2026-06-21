@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -24,9 +24,12 @@
                 <li><a href="src/html/servicios.html" class="link-item">Servicios</a></li>
                 <li><a href="src/html/citas.html" class="link-item">Agendar Cita</a></li>
             </ul>
-            <div class="navbar-buttons">
+            <div class="navbar-buttons" id="auth-links">
                 <a href="src/html/registros.html" class="btn-link btn-register">Registrarse</a>
-                <a href="/src/html/Inicio_Sesion.html" class="btn-link btn-login">Iniciar sesión</a>
+                <a href="src/html/Inicio_Sesion.html" class="btn-link btn-login">Iniciar sesión</a>
+            </div>
+            <div class="navbar-buttons">
+                <a id="logout-link" href="#" class="btn-link btn-login" style="display: none;">Cerrar sesión</a>
             </div>
         </nav>
     </header>
@@ -67,7 +70,7 @@
             <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
     </footer>
-
+    <script type="module" src="src/js/app.js"></script>
 </body>
 
 </html>

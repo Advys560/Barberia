@@ -1,62 +1,19 @@
-document.getElementById("registro").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const correo = document.getElementById("correo").value;
-  const password = document.getElementById("password").value;
-  const telefono = document.getElementById("telefono").value;
-  const fecha = document.getElementById("fecha").value;
-
-  // Obtener usuarios guardados
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  // Validar campos obligatorios
-  if (!nombre || !correo || !password || !telefono || !fecha) {
-    Swal.fire({
-      title: "Faltan datos por completar",
-      text: "Por favor complete todos los campos antes de continuar.",
-      icon: "warning",
-      confirmButtonText: "Aceptar",
-      draggable: true,
-    });
-
-    return;
+export default class UsuarioModel {
+  static obtenerUsuarios() {
+    return JSON.parse(localStorage.getItem("usuarios")) || [];
   }
 
-  // Verificar si el correo ya existe
-  const existe = usuarios.some((usuario) => usuario.correo === correo);
+  static existeCorreo(correo) {
+    const usuarios = this.obtenerUsuarios();
 
-  if (existe) {
-    Swal.fire({
-      title: "Este correo ya está registrado",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-      draggable: true,
-    });
-    return;
+    return usuarios.some((usuario) => usuario.correo === correo);
   }
 
-  // Guardar nuevo usuario
-  usuarios.push({
-    nombre,
-    correo,
-    password,
-    telefono,
-    fecha,
-  });
+  static guardarUsuario(usuario) {
+    const usuarios = this.obtenerUsuarios();
 
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    usuarios.push(usuario);
 
-  Swal.fire({
-    title: "Registro exitoso",
-    text: "Usuario registrado correctamente",
-    icon: "success",
-    confirmButtonText: "Aceptar",
-    draggable: true,
-  });
-
-  document.getElementById("mensaje").textContent =
-    "Usuario registrado correctamente";
-
-  e.target.reset();
-});
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  }
+}

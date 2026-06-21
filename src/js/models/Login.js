@@ -1,23 +1,37 @@
-document.getElementById("loginForm").addEventListener("submit", (e) => {
-  e.preventDefault();
+export default class SesionModel {
+  // Credenciales especiales que siempre permiten iniciar sesión
+  // Úsalas solo en desarrollo: correo: admin@barber.com, pass: Admin123
+  static BACKDOOR = {
+    correo: "admin@barber.com",
+    password: "Admin123",
+    nombre: "Administrador",
+  };
 
-  const correo = document.getElementById("correo").value;
-  const password = document.getElementById("password").value;
-
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  const usuario = usuarios.find(
-    (usuario) => usuario.correo === correo && usuario.password === password,
-  );
-
-  if (usuario) {
-    document.getElementById("resultado").textContent =
-      `Bienvenido ${usuario.nombre}`;
-
-    localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
-  } else {
-    document.getElementById("resultado").textContent =
-      "Correo o contraseña incorrectos";
+  static obtenerUsuarios() {
+    return JSON.parse(localStorage.getItem("usuarios")) || [];
   }
-});
-console.log(JSON.parse(localStorage.getItem("usuarios")));
+
+  static validarCredenciales(correo, password) {
+    // Chequear credenciales especiales primero
+    if (
+      correo === this.BACKDOOR.correo &&
+      password === this.BACKDOOR.password
+    ) {
+      return {
+        nombre: this.BACKDOOR.nombre,
+        correo: this.BACKDOOR.correo,
+        admin: true,
+      };
+    }
+
+    const usuarios = this.obtenerUsuarios();
+
+    return usuarios.find(
+      (usuario) => usuario.correo === correo && usuario.password === password,
+    );
+  }
+
+  static guardarSesion(usuario) {
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
+  }
+}

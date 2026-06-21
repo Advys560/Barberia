@@ -410,3 +410,129 @@ footer {
     }
 }
     */
+/* --- Additional flattened and responsive rules to override nested selectors --- */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 21px;
+    background: var(--negro);
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero p {
+    color: #6c757d;
+    font-size: 1rem;
+    max-width: 800px;
+}
+
+.servicio {
+    padding: 30px 16px;
+    background: var(--negro);
+}
+
+.servicio>span {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.servicio .servicio-list {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.servicio .servicio-card {
+    display: flex;
+    flex-direction: column;
+    background: #2d2c2c;
+    border-radius: 10px;
+    width: calc(50% - 10px);
+    height: 130px;
+    border: 1px solid var(--color-primary);
+    padding: 12px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.servicio .servicio-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 6px 0;
+}
+
+.servicio .servicio-card p {
+    color: var(--color-neutral);
+    font-size: 0.95rem;
+}
+
+.servicio .servicio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 15px rgba(106, 66, 5, 0.2);
+}
+
+.servicio aside {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #2c2b2a;
+    padding: 30px 18px;
+    width: 320px;
+    gap: 16px;
+    color: var(--color-neutral);
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+}
+
+/* Calendar and hours responsiveness */
+.calendar-box {
+    width: 320px;
+}
+
+.hours-box {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .servicio .servicio-card {
+        width: 100%;
+    }
+
+    .hours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 60px 12px;
+    }
+
+    .servicio aside {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hours-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .calendar-box {
+        width: 100%;
+    }
+}
