@@ -50,6 +50,6 @@ export default class LoginController {
 
     LoginView.limpiarFormulario();
 
-    LoginView.redirigirInicio();
+    LoginView.redirigirInicio(usuario);
   }
 }

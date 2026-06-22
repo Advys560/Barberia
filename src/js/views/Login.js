@@ -43,7 +43,22 @@ export default class SesionView {
     if (form) form.reset();
   }
 
-  static redirigirInicio() {
-    window.location.href = "../../index.html";
+  static redirigirInicio(usuario) {
+    let role = usuario && usuario.role ? usuario.role : null;
+
+    if (!role) {
+      try {
+        const stored = JSON.parse(localStorage.getItem("usuarioActivo") || "{}");
+        role = stored.role;
+      } catch (e) {
+        role = null;
+      }
+    }
+
+    if (role === "barbero") {
+      window.location.href = "./barbero.html";
+    } else {
+      window.location.href = "./ver_citas.html";
+    }
   }
 }
