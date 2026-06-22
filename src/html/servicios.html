@@ -7,6 +7,8 @@
     <title>Servicios | Barbery Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <link rel="stylesheet" href="../css/servicios.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="shortcut icon" href="../assets/imgs/barberia.png" type="image/x-icon">
@@ -18,12 +20,13 @@
         <nav class="navbar">
             <div class="logo-container">
                 <img src="../assets/imgs/barberia.png" alt="Logo Barber Solutions">
-                <h2 class="logo">Barber Solutions</h2>
+                <h2 class="logo">Barbery Solutions</h2>
             </div>
             <ul class="navbar-links">
                 <li><a href="../../index.html" class="link-item">Inicio</a></li>
-                <li><a href="./servicios.html" class="link-item">Servicios</a></li>
-                <li><a href="./citas.html" class="link-item">Agendar Cita</a></li>
+                <li><a href="servicios.html" class="link-item">Servicios</a></li>
+                <li><a href="citas.html" class="link-item">Agendar Cita</a></li>
+                <li><a href="ver-citas.html" class="link-item">Ver Citas</a></li>
             </ul>
             <div class="navbar-buttons" id="auth-links">
                 <a href="registros.html" class="btn-link btn-register">Registrarse</a>
@@ -35,60 +38,146 @@
         </nav>
     </header>
 
-    <div class="text-center my-5">
-        <h1 class="fw-bold text-white" style="letter-spacing: 4px;">EXCEPTIONAL GROOMING</h1>
-        <p class="fw-bold subtitles" style="font-size: 12px; letter-spacing: 2px;">
-            SELECTED SERVICES FOR THE DISCERNING CLIENT
+    <div class="text-center my-5 animate__animated animate__fadeIn">
+        <h1 class="fw-bold text-white" style="letter-spacing: 4px;">ESTILO EXCEPCIONAL</h1>
+        <p class="fw-bold subtitles" style="font-size: 12px; letter-spacing: 2px; color: #926d27;">
+            SERVICIOS EXCLUSIVOS DISEÑADOS PARA EL CABALLERO CONTEMPORÁNEO
         </p>
     </div>
 
-    <section class="container mb-5">
-        <div class="row g-4 justify-content-center">
-
-            <div class="col-12 col-md-4 d-flex">
-                <div class="card h-100 border-0 border-top border-2 shadow-sm"
-                    style="border-top-color: #926d27 !important;">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title fw-bold text-white">The Signature Cut</h5>
-                            <p class="card-text subtitles mt-3">Some quick example text to build on the card title and
-                                make up the bulk of the card’s content.</p>
-                        </div>
-                        <button type="button" class="btn-card">Reservar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 d-flex">
-                <div class="card h-100 border-0 border-top border-2 shadow-sm"
-                    style="border-top-color: #926d27 !important;">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title fw-bold text-white">Classic Shave</h5>
-                            <p class="card-text subtitles mt-3">Precision cut, straight razor neck shave, and tailored
-                                styling.</p>
-                        </div>
-                        <button type="button" class="btn-card">Reservar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 d-flex">
-                <div class="card h-100 border-0 border-top border-2 shadow-sm"
-                    style="border-top-color: #926d27 !important;">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title fw-bold text-white">Beard Grooming</h5>
-                            <p class="card-text subtitles mt-3">Some quick example text to build on the card title and
-                                make up the bulk of the card’s content.</p>
-                        </div>
-                        <button type="button" class="btn-card">Reservar</button>
-                    </div>
-                </div>
-            </div>
-
+    <main class="container mb-5">
+        
+        <div class="my-4">
+            <h3 class="text-white border-bottom pb-2" style="border-color: #926d27 !important;">
+                <i class="fa-solid fa-scissors me-2" style="color: #926d27;"></i> Barbería Clásica
+            </h3>
         </div>
-    </section>
+        
+        <div class="row g-4 justify-content-center mb-5">
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">The Signature Cut</h5>
+                                <span class="fw-bold" style="color: #926d27;">$35.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 45 min</small>
+                            <p class="card-text subtitles">
+                                Nuestro servicio insignia. Incluye asesoramiento de imagen según tus facciones, corte personalizado con tijera y máquina, lavado premium con masaje capilar relajante y estilizado final con productos de alta gama.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">Classic Shave</h5>
+                                <span class="fw-bold" style="color: #926d27;">$30.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 40 min</small>
+                            <p class="card-text subtitles">
+                                Una experiencia tradicional de barbería clásica. Ritual completo con toallas calientes aromatizadas para abrir los poros, aplicación de espuma densa artesanal, afeitado a navaja barbera de un solo filo y loción tónica refrescante.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">Beard Grooming</h5>
+                                <span class="fw-bold" style="color: #926d27;">$25.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 30 min</small>
+                            <p class="card-text subtitles">
+                                Perfilado y diseño estructural de barba adaptado al contorno de tu rostro. Incluye rebaje simétrico, definición de líneas en mejillas y cuello con navaja, finalizando con una hidratación profunda a base de aceites esenciales.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 pt-3">
+            <h3 class="text-white border-bottom pb-2" style="border-color: #926d27 !important;">
+                <i class="fa-solid fa-crown me-2" style="color: #926d27;"></i> Experiencias Premium & Combos
+            </h3>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">The Royal Pack</h5>
+                                <span class="fw-bold" style="color: #926d27;">$55.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 75 min</small>
+                            <p class="card-text subtitles">
+                                El paquete definitivo de cuidado masculino. Combina nuestro aclamado servicio de corte personalizado (The Signature Cut) junto al ritual de diseño y perfilado de barba (Beard Grooming). Ahorra tiempo y luce impecable.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">Grey Camouflage</h5>
+                                <span class="fw-bold" style="color: #926d27;">$40.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 35 min</small>
+                            <p class="card-text subtitles">
+                                Atenuación sutil y natural de las canas mediante coloración semipermanente express de aplicación directa en el lavacabezas. Diseñado específicamente para el cabello masculino, devolviendo juventud sin perder la elegancia.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex">
+                <div class="card h-100 border-0 border-top border-2 shadow-sm"
+                    style="border-top-color: #926d27 !important; background-color: #111111;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title fw-bold text-white m-0">Premium Facial Detox</h5>
+                                <span class="fw-bold" style="color: #926d27;">$20.000</span>
+                            </div>
+                            <small class="text-muted d-block mb-3"><i class="fa-regular fa-clock me-1"></i> 25 min</small>
+                            <p class="card-text subtitles">
+                                Tratamiento de limpieza profunda para el cutis. Remoción de impurezas con exfoliación activa, mascarilla negra purificante de carbón activado para puntos negros y un masaje facial relajante complementado con hidratación.
+                            </p>
+                        </div>
+                        <a href="citas.html" class="btn btn-card text-center mt-4 w-100">Reservar Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         <section class="footer-brand">
@@ -106,6 +195,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script type="module" src="../js/app.js"></script>
 </body>
 

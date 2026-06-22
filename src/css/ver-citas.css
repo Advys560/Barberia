@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Estilos específicos para la sección de Visualización y Gestión de Citas
+   ========================================================================== */
+
+.container-citas {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-citas h2 {
+    color: #C5A059;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.container-citas p {
+    color: #b3b3b3;
+    margin-bottom: 25px;
+}
+
+/* Tabla de Citas */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #C5A059;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111111;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #2d2c2c;
+}
+
+th {
+    background-color: #C5A059;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    color: #e5e5e5;
+    font-size: 0.95rem;
+}
+
+tr:hover td {
+    background-color: #1a1a1a;
+}
+
+/* Botones de Acción */
+.btn-action {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: #C5A059;
+    color: #000000;
+    margin-right: 8px;
+}
+
+.btn-edit:hover {
+    background: #e1b869;
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background: #d9534f;
+    color: #ffffff;
+}
+
+.btn-delete:hover {
+    background: #c9302c;
+    transform: translateY(-1px);
+}
+
+
+.modal-edit {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.85); 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #161616; 
+    border: 1px solid #C5A059; 
+    padding: 30px; 
+    border-radius: 8px; 
+    width: 90%; 
+    max-width: 420px; 
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h3 { 
+    color: #C5A059; 
+    margin-bottom: 20px; 
+    font-size: 1.5rem;
+    border-bottom: 1px solid #2d2c2c;
+    padding-bottom: 10px;
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select { 
+    width: 100%; 
+    padding: 10px; 
+    background: #222222; 
+    border: 1px solid #444444; 
+    color: #ffffff; 
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #C5A059;
+}
+
+.modal-actions { 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 12px; 
+    margin-top: 25px; 
+}
+
+#btn-cerrar-modal {
+    background: #2d2c2c;
+    color: #ffffff;
+}
+
+#btn-cerrar-modal:hover {
+    background: #403f3f;
+}
