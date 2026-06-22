@@ -12,14 +12,23 @@ export default class SesionModel {
     {
       correo: "barbero1@barber.com",
       password: "Barbero123",
-      nombre: "Barbero Uno",
+      nombre: "Messi",
       role: "barbero",
+      barberoId: 1,
     },
     {
       correo: "barbero2@barber.com",
       password: "Barbero123",
-      nombre: "Barbero Dos",
+      nombre: "Cristiano",
       role: "barbero",
+      barberoId: 2,
+    },
+    {
+      correo: "barbero3@barber.com",
+      password: "Barbero123",
+      nombre: "Yamal",
+      role: "barbero",
+      barberoId: 3,
     },
   ];
 
