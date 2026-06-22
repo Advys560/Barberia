@@ -170,7 +170,19 @@ export class CitaView {
         this.resumenHora.style.display   = "block";
     }
 
-    habilitarBoton(habilitar) {
-        this.btnConfirmar.disabled = !habilitar;
+    // Dentro de citaView.js
+habilitarBoton(estaCompleta) {
+    const btn = document.getElementById('btn_agendar_cita'); // Asegúrate de usar este ID exacto
+    if (btn) {
+        btn.disabled = !estaCompleta;
     }
+}
+    // Dentro de tu clase CitaView en citaView.js agrega:
+
+onConfirmarClick(callback) {
+    const btn = document.getElementById('btn_agendar_cita');
+    if (btn) {
+        btn.addEventListener('click', callback);
+    }
+}
 }

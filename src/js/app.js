@@ -3,9 +3,9 @@ import { CitaView } from "./views/citaView.js";
 import { CitaController } from "./controllers/citaController.js";
 import RegistroController from "./controllers/Registro.js";
 import LoginController from "./controllers/Login.js";
-import { AuthController } from "./controllers/authController.js"; // Nuevo
+import { AuthController } from "./controllers/authController.js";
 
-// Inicializar componentes globales (como la barra de navegación/auth)
+// Inicializar componentes globales
 new AuthController();
 
 // Inicializar controladores específicos por página
@@ -17,7 +17,7 @@ const isCitasPage =
 if (isCitasPage) {
   const model = new Cita();
   const view = new CitaView();
-  new CitaController(model, view);
+  new CitaController(model, view); // 👈 El controlador se encargará del botón internamente
 }
 
 if (document.getElementById("registro")) {

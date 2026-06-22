@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="shortcut icon" href="../assets/imgs/barberia.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -39,7 +42,6 @@
         <p>Selecciona detalladamente tu servicio para asegurar un espacio<br> en nuestra agenda de Barbery Solution</p>
     </section>
 
-
     <section class="servicio">
         <span><span>1</span> Selecciona tu Servicio</span>
         <div>
@@ -69,12 +71,11 @@
                 <p id="resumen-barbero" style="display:none"></p>
                 <p id="resumen-fecha" style="display:none"></p>
                 <p id="resumen-hora" style="display:none"></p>
-                <button id="btn-confirmar" disabled>Confirmar cita</button>
+                <button id="btn_agendar_cita">Confirmar cita</button>
             </aside>
         </div>
     </section>
 
-    <!-- PASO 2: BARBEROS -->
     <section class="barberos">
         <span><span>2</span> Elige tu Barbero</span>
         <div id="lista-barberos">
@@ -100,7 +101,6 @@
         </div>
     </section>
 
-    <!-- PASO 3: FECHA Y HORA -->
     <section class="cita">
         <span><span>3</span> Selecciona Fecha y Hora</span>
 

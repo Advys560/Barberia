@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0c0909;
+    background: var(--color-secondary);
     color: #E5E5E5;
     overflow-x: hidden;
 }
@@ -20,7 +20,9 @@ body {
     --color-neutral: #E5E5E5;
     --boton: #c7a464;
     --text-color: #E5E5E5;
+    --negro: #000000;
 }
+
 
 header .navbar {
     background-color: var(--color-secundary);
@@ -91,13 +93,13 @@ header .navbar {
 }
 
 .btn-register:hover {
-    background-color: var(--color-import);
+    background: transparent;
     border-color: var(--color-import);
-    color: white;
+    color: var(--color-primary);
 }
 
 .btn-login {
-    background-color: transparent;
+    background: transparent;
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
 }
@@ -110,67 +112,64 @@ header .navbar {
 footer {
     width: 100%;
     box-sizing: border-box;
-    padding: 40px 5%;
-    margin-top: 60px;
+    padding: 60px 5% 40px 5%; 
+    margin-top: 0; 
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
 
-    background-color: var(--color-secondary);
+    background: var(--color-secondary);
     border-top: 2px solid var(--color-primary);
-    height: 120px;
-}
 
-/* Marca */
-.footer-brand {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+    .footer-brand {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
 
-.footer-brand span {
-    font-size: 0.9rem;
-    color: var(--color-neutral);
-}
+        span {
+            font-size: 1rem;
+            color: var(--color-neutral);
+        }
+    }
 
-/* Logo Footer */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-.logo-container img {
-    height: 35px;
-}
+        img {
+            height: 35px;
+        }
 
-.logo-container h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-}
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+    }
 
-.footer-socials {
-    display: flex;
-    gap: 18px;
-}
+    .footer-socials {
+        display: flex;
+        gap: 18px;
 
-.footer-socials a {
-    text-decoration: none;
-}
+        a {
+            text-decoration: none;
 
-.footer-socials a i {
-    color: var(--color-primary);
-    font-size: 22px;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
+            i {
+                color: var(--color-primary);
+                font-size: 22px;
+                transition: transform 0.2s ease, color 0.2s ease;
+            }
+        }
 
-.footer-socials a:hover i {
-    filter: brightness(1.2);
-    transform: scale(1.15);
+        a:hover i {
+            filter: brightness(1.2);
+            transform: scale(1.15);
+        }
+    }
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'sans-serif', Montserrat;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -21,79 +21,93 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 21px;
     background: var(--negro);
-    padding: 120px;
+    padding: 100px 20px;
 
     h1 {
         color: var(--color-primary);
-
+        font-size: 2.5rem;
     }
 
     p {
         color: #6c757d;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        max-width: 800px;
     }
 }
 
 .servicio {
-    padding: 30px;
+    padding: 40px 20px;
     background: var(--negro);
 
     span {
         color: var(--color-primary);
-        padding: 10px;
+        font-size: 1.3rem;
+        display: inline-block;
+        margin-bottom: 25px;
 
         span {
             background: var(--color-primary);
-            padding: 8px;
+            padding: 6px 12px;
             border-radius: 10px;
-            color: var(--color-secundary);
-
+            color: var(--negro);
+            font-weight: bold;
         }
     }
 
     div {
         display: flex;
-        gap: 20px;
+        gap: 30px;
         align-items: flex-start;
-        padding: 12px;
 
-        div {
+        #lista-servicios {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            flex: 1;
+        }
 
-            div {
+        .servicio-card {
+            display: flex;
+            flex-direction: column;
+            background: #2d2c2c;
+            border-radius: 10px;
+            width: calc(50% - 10px);
+            min-height: 140px;
+            padding: 20px;
+            border: 1px solid var(--color-primary);
+            transition: all 0.35s ease-in-out;
+            cursor: pointer;
+
+            h3 {
+                color: var(--color-primary);
+                margin-bottom: 8px;
                 display: flex;
-                flex-direction: column;
-                background: #2d2c2c;
-                border-radius: 10px;
-                width: calc(50% - 10px);
-                height: 130px;
-                border: 1px solid var(--color-primary);
-                transition: all 0.5s ease-in-out;
+                justify-content: space-between;
+                align-items: center;
 
-                h3 {
+                span {
+                    background: var(--color-tertiary);
                     color: var(--color-primary);
-
-                    span {
-                        background: var(--color-tertiary);
-                        border-radius: 20px;
-
-                    }
-                }
-
-                p {
-                    color: var(--color-neutral);
+                    padding: 2px 10px;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
                 }
             }
 
-            div:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
+            p {
+                color: var(--color-neutral);
+                font-size: 0.95rem;
+                line-height: 1.4;
             }
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(197, 160, 89, 0.2);
         }
 
         aside {
@@ -101,13 +115,15 @@
             flex-direction: column;
             text-align: center;
             background: #2c2b2a;
-            padding: 50px 25px;
+            padding: 40px 25px;
             width: 320px;
             gap: 20px;
             color: var(--color-neutral);
             border-radius: 8px;
             border: 1px solid var(--color-primary);
-            transition: all 0.5s ease-in-out;
+            transition: all 0.35s ease-in-out;
+            position: sticky;
+            top: 20px;
 
             hr {
                 border: none;
@@ -123,106 +139,127 @@
                 border-radius: 5px;
                 cursor: pointer;
                 font-weight: bold;
-                transition: backgroud 0.5s ease;
+                transition: all 0.3s ease;
             }
 
-            button:hover {
+            button:hover:not(:disabled) {
                 background: var(--color-primary);
-                color: var(--color-secundary);
+                color: var(--color-secondary);
+            }
+
+            button:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
             }
         }
 
         aside:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(197, 160, 89, 0.2);
         }
     }
 }
 
 .barberos {
-    padding: 30px;
+    padding: 40px 20px;
     background: var(--negro);
 
     span {
         color: var(--color-primary);
-        padding: 10px;
+        font-size: 1.3rem;
+        display: inline-block;
+        margin-bottom: 25px;
 
         span {
             background: var(--color-primary);
-            padding: 8px;
+            padding: 6px 12px;
             border-radius: 10px;
-            color: var(--color-secundary);
-
+            color: var(--negro);
+            font-weight: bold;
         }
     }
 
     div {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        padding: 20px;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 20px 0;
 
-        div {
-            padding: 70px 35px;
-            text-align: left;
+        .barbero-card {
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
             background: #272422;
-            width: 250px;
-            height: 310px;
+            padding: 30px 20px;
+            width: 280px;
             border-radius: 10px;
-            transition: all 0.5s ease-in-out;
+            border: 1px solid transparent;
+            transition: all 0.35s ease-in-out;
+            gap: 15px;
 
             img {
-                width: 180px;
+                width: 100%;
+                max-width: 180px;
                 height: 210px;
-                border-radius: 20px;
+                object-fit: cover;
+                border-radius: 15px;
             }
 
-            h3,
-            p {
+            h3 {
                 color: var(--color-primary);
+                font-size: 1.4rem;
+            }
+
+            p {
+                color: var(--color-neutral);
+                font-size: 0.95rem;
             }
 
             button {
                 background: var(--color-tertiary);
                 color: var(--color-primary);
                 border: 1px solid var(--color-primary);
-                padding: 10px;
+                padding: 10px 20px;
                 border-radius: 5px;
                 cursor: pointer;
                 font-weight: bold;
-                transition: backgroud 0.5s ease;
+                width: 100%;
+                transition: all 0.3s ease;
             }
 
             button:hover {
                 background: var(--color-primary);
-                color: var(--color-secundary);
+                color: var(--color-secondary);
             }
         }
 
-        div:hover {
+        .barbero-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 15px rgba(106, 66, 5, 0.3);
+            border-color: var(--color-primary);
+            box-shadow: 0 8px 15px rgba(197, 160, 89, 0.2);
         }
     }
 }
 
 .cita {
-    padding: 30px;
+    padding: 40px 20px;
     background: var(--negro);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     span {
         color: var(--color-primary);
-        padding: 10px;
+        font-size: 1.3rem;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
 
         span {
             background: var(--color-primary);
-            padding: 8px;
+            padding: 6px 12px;
             border-radius: 10px;
-            color: var(--color-secundary);
+            color: var(--negro);
+            font-weight: bold;
         }
     }
 
@@ -232,7 +269,7 @@
         padding: 20px;
         background: transparent;
         width: 100%;
-        max-width: 900px;
+        max-width: 950px;
         margin: 0 auto;
 
         .booking-container {
@@ -243,14 +280,12 @@
             align-items: flex-start;
         }
 
-        /* CALENDARIO */
         .calendar-box {
             background: #111111;
-            /* Color oscuro profundo */
             padding: 25px;
             border-radius: 20px;
-            width: 320px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 340px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 
             .calendar-header {
                 display: flex;
@@ -276,8 +311,7 @@
                 }
             }
 
-            .weekdays,
-            .days {
+            .weekdays, .days {
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
                 text-align: center;
@@ -302,7 +336,6 @@
                 align-items: center;
                 transition: all 0.2s ease;
 
-                /* Días de relleno vacíos */
                 &.empty {
                     cursor: default;
                     background: transparent !important;
@@ -312,7 +345,6 @@
                     background: rgba(255, 255, 255, 0.1);
                 }
 
-                /* Día seleccionado actual */
                 &.active {
                     background: var(--color-primary) !important;
                     color: #000 !important;
@@ -321,10 +353,9 @@
             }
         }
 
-        /* HORAS */
         .hours-box {
             flex: 1;
-            min-width: 280px;
+            min-width: 300px;
 
             h3 {
                 color: var(--color-primary);
@@ -365,174 +396,51 @@
     }
 }
 
-/*
-footer {
-    padding: 40px;
-    background: #2e3337;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-
-    h1 {
-        color: var(--color-primary);
-        padding: 15px;
-    }
-
-    span {
-        color: var(--color-primary);
-        padding: 15px;
-    }
-
-    div {
-        display: flex;
-        gap: 18px;
-        margin-top: 5px;
-
-        a {
-            text-decoration: none;
-
-            i {
-
-                color: var(--color-primary);
-                font-size: 22px;
-                transition: transform 0.2s ease, color 0.2s ease;
-            }
-
-            &:hover i {
-                transform: scale(1.15);
-                filter: brightness(1.2);
-            }
+@media (max-width: 1024px) {
+    .servicio div {
+        flex-direction: column;
+        
+        aside {
+            width: 100%;
+            position: static;
         }
     }
 }
-    */
-/* --- Additional flattened and responsive rules to override nested selectors --- */
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 21px;
-    background: var(--negro);
-    padding: 80px 20px;
-}
 
-.hero h1 {
-    color: var(--color-primary);
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.hero p {
-    color: #6c757d;
-    font-size: 1rem;
-    max-width: 800px;
-}
-
-.servicio {
-    padding: 30px 16px;
-    background: var(--negro);
-}
-
-.servicio>span {
-    color: var(--color-primary);
-    display: block;
-    margin-bottom: 12px;
-}
-
-.servicio .servicio-list {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.servicio .servicio-card {
-    display: flex;
-    flex-direction: column;
-    background: #2d2c2c;
-    border-radius: 10px;
-    width: calc(50% - 10px);
-    height: 130px;
-    border: 1px solid var(--color-primary);
-    padding: 12px;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.servicio .servicio-card h3 {
-    color: var(--color-primary);
-    margin: 0 0 6px 0;
-}
-
-.servicio .servicio-card p {
-    color: var(--color-neutral);
-    font-size: 0.95rem;
-}
-
-.servicio .servicio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 15px rgba(106, 66, 5, 0.2);
-}
-
-.servicio aside {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: #2c2b2a;
-    padding: 30px 18px;
-    width: 320px;
-    gap: 16px;
-    color: var(--color-neutral);
-    border-radius: 8px;
-    border: 1px solid var(--color-primary);
-}
-
-/* Calendar and hours responsiveness */
-.calendar-box {
-    width: 320px;
-}
-
-.hours-box {
-    flex: 1;
-    min-width: 280px;
-}
-
-.hours-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-@media (max-width: 900px) {
-    .servicio .servicio-card {
-        width: 100%;
-    }
-
-    .hours-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media (max-width: 768px) {
     .hero {
-        padding: 60px 12px;
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
     }
 
-    .servicio aside {
-        width: 100%;
+    .servicio div .servicio-card {
+        width: 100%; 
+    }
+
+    .cita form {
+        .booking-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .calendar-box, .hours-box {
+            width: 100%;
+        }
+        .hours-box .hours-grid {
+            grid-template-columns: repeat(2, 1fr); 
+        }
     }
 }
 
 @media (max-width: 480px) {
-    .hours-grid {
-        grid-template-columns: repeat(1, 1fr);
+    .hero { padding: 60px 15px; }
+    .servicio, .barberos, .cita { padding: 30px 15px; }
+
+    .barberos div .barbero-card {
+        width: 100%; 
     }
 
-    .calendar-box {
-        width: 100%;
+    .cita form .hours-box .hours-grid {
+        grid-template-columns: repeat(1, 1fr); 
     }
 }
