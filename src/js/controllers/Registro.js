@@ -19,7 +19,7 @@ export default class RegistroController {
       !usuario.correo ||
       !usuario.password ||
       !usuario.telefono ||
-      !usuario.fech
+      !usuario.fecha
     ) {
       UsuarioView.mostrarCamposVacios();
       return;

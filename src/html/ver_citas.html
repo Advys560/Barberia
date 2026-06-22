@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Citas | Barbery Solution</title>
-    
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/ver-citas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -41,7 +41,7 @@
     <main class="container-citas">
         <h2>Mis Citas Agendadas</h2>
         <p>A continuación se listan las citas correspondientes a tu usuario activo.</p>
-        
+
         <div class="table-responsive">
             <table>
                 <thead>
@@ -54,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody id="tabla-citas-body">
-                    </tbody>
+                </tbody>
             </table>
         </div>
     </main>
@@ -64,12 +64,12 @@
             <h3>Modificar Cita</h3>
             <form id="form-editar-cita">
                 <input type="hidden" id="edit-index">
-                
+
                 <div class="form-group">
                     <label for="edit-fecha">Nueva Fecha:</label>
                     <input type="date" id="edit-fecha" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="edit-hora">Nueva Hora:</label>
                     <select id="edit-hora" required>
@@ -85,7 +85,7 @@
                         <option value="18:00">06:00 p.m</option>
                     </select>
                 </div>
-                
+
                 <div class="modal-actions">
                     <button type="button" id="btn-cerrar-modal" class="btn-action">Cancelar</button>
                     <button type="submit" class="btn-action btn-edit">Guardar Cambios</button>
@@ -98,17 +98,18 @@
     <script type="module" src="../js/ver_cita.js"></script>
 </body>
 <footer>
-        <section class="footer-brand">
-            <div class="logo-container">
-                <img src="../assets/imgs/barberia.png" alt="Logo">
-                <h1>Barbery Solutions</h1>
-            </div>
-            <span>&copy; 2026 Barbery Solutions. Todos los derechos reservados</span>
-        </section>
-        <div class="footer-socials">
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    <section class="footer-brand">
+        <div class="logo-container">
+            <img src="../assets/imgs/barberia.png" alt="Logo">
+            <h1>Barbery Solutions</h1>
         </div>
-    </footer>
+        <span>&copy; 2026 Barbery Solutions. Todos los derechos reservados</span>
+    </section>
+    <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</footer>
+
 </html>

@@ -13,16 +13,16 @@ export function redirectAlert(mensaje, icon, citaObj) {
         <p style="margin-bottom: 0;"><strong style="color: #C5A059;">⏰ Hora:</strong> ${resumen.hora} p.m</p>
       </div>
     `,
-    background: '#000000',
-    color: '#E5E5E5',
-    
+    background: "#000000",
+    color: "#E5E5E5",
+
     // Configuración personalizada de botones permanentes
     showCancelButton: true,
-    confirmButtonColor: '#C5A059',
-    cancelButtonColor: '#2d2c2c',
-    confirmButtonText: 'Agendar otra cita',
-    cancelButtonText: 'Volver al inicio',
-    
+    confirmButtonColor: "#C5A059",
+    cancelButtonColor: "#2d2c2c",
+    confirmButtonText: "Agendar otra cita",
+    cancelButtonText: "Ver citas",
+
     // Evita cierres accidentales fuera de la ventana
     allowOutsideClick: false,
     allowEscapeKey: false,
@@ -39,7 +39,7 @@ export function redirectAlert(mensaje, icon, citaObj) {
       window.location.reload();
     } else if (result.dismiss === Swal.DismissReason.cancel) {
       // Regresar a la página de bienvenida principal
-      window.location.href = '../../index.html'; 
+      window.location.href = "../html/ver_citas.html";
     }
   });
 }
