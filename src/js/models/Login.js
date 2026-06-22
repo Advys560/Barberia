@@ -1,11 +1,27 @@
 export default class SesionModel {
-  // Credenciales especiales que siempre permiten iniciar sesión
-  // Úsalas solo en desarrollo: correo: admin@barber.com, pass: Admin123
+  // Cuentas predefinidas de acceso rápido
   static BACKDOOR = {
     correo: "admin@barber.com",
     password: "Admin123",
     nombre: "Administrador",
+    admin: true,
+    role: "admin",
   };
+
+  static BARBER_ACCOUNTS = [
+    {
+      correo: "barbero1@barber.com",
+      password: "Barbero123",
+      nombre: "Barbero Uno",
+      role: "barbero",
+    },
+    {
+      correo: "barbero2@barber.com",
+      password: "Barbero123",
+      nombre: "Barbero Dos",
+      role: "barbero",
+    },
+  ];
 
   static obtenerUsuarios() {
     return JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -17,16 +33,13 @@ export default class SesionModel {
       correo === this.BACKDOOR.correo &&
       password === this.BACKDOOR.password
     ) {
-      return {
-        nombre: this.BACKDOOR.nombre,
-        correo: this.BACKDOOR.correo,
-        admin: true,
-      };
+      return this.BACKDOOR;
     }
 
     const usuarios = this.obtenerUsuarios();
+    const usuariosRegistrados = [...usuarios, ...this.BARBER_ACCOUNTS];
 
-    return usuarios.find(
+    return usuariosRegistrados.find(
       (usuario) => usuario.correo === correo && usuario.password === password,
     );
   }

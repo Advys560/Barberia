@@ -109,11 +109,23 @@ header .navbar {
     color: var(--color-secundary);
 }
 
+.btn-cerrar {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-cerrar:hover {
+    background-color: red;
+    color: var(--color-secundary);
+    border-color: red;
+}
+
 footer {
     width: 100%;
     box-sizing: border-box;
-    padding: 60px 5% 40px 5%; 
-    margin-top: 0; 
+    padding: 60px 5% 40px 5%;
+    margin-top: 0;
 
     display: flex;
     justify-content: space-between;

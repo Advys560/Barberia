@@ -49,6 +49,37 @@ export class AuthController {
       // no crítico
       console.warn("No se pudo actualizar el botón principal:", err);
     }
+
+    // Ajustar el enlace "Ver Citas" para cada rol
+    try {
+      const verCitasLinks = document.querySelectorAll(
+        'a.link-item[href*="ver-citas"]',
+      );
+      if (verCitasLinks.length > 0 && usuarioActivo) {
+        verCitasLinks.forEach((link) => {
+          const currentPath = window.location.pathname;
+
+          if (usuarioActivo.admin) {
+            // El admin usa ver-citas.html
+            if (currentPath.endsWith("index.html") || currentPath === "/") {
+              link.setAttribute("href", "src/html/ver-citas.html");
+            } else if (currentPath.includes("/src/html/")) {
+              link.setAttribute("href", "./ver-citas.html");
+            }
+          } else if (usuarioActivo.role === "barbero") {
+            // Los barberos van a su panel
+            if (currentPath.endsWith("index.html") || currentPath === "/") {
+              link.setAttribute("href", "src/html/barbero.html");
+            } else if (currentPath.includes("/src/html/")) {
+              link.setAttribute("href", "./barbero.html");
+            }
+          }
+        });
+      }
+    } catch (err) {
+      // no crítico
+      console.warn("No se pudo ajustar el enlace Ver Citas:", err);
+    }
   }
 
   asociarEventos() {
