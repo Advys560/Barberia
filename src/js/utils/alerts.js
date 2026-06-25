@@ -7,10 +7,10 @@ export function redirectAlert(mensaje, icon, citaObj) {
     icon: icon,
     html: `
       <div style="text-align: left; background: #1a1a1a; padding: 15px; border-radius: 8px; border: 1px solid #C5A059; margin-top: 15px; font-family: 'Montserrat', sans-serif; color: #E5E5E5;">
-        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">✂️ Servicio:</strong> ${resumen.servicio}</p>
-        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">💈 Barbero:</strong> ${resumen.barbero}</p>
-        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">📅 Fecha:</strong> ${resumen.fecha}</p>
-        <p style="margin-bottom: 0;"><strong style="color: #C5A059;">⏰ Hora:</strong> ${resumen.hora} p.m</p>
+        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">Servicio:</strong> ${resumen.servicio}</p>
+        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">Barbero:</strong> ${resumen.barbero}</p>
+        <p style="margin-bottom: 10px;"><strong style="color: #C5A059;">Fecha:</strong> ${resumen.fecha}</p>
+        <p style="margin-bottom: 0;"><strong style="color: #C5A059;">Hora:</strong> ${resumen.hora} p.m</p>
       </div>
     `,
     background: "#000000",
