@@ -30,7 +30,7 @@
 /* CALENDARIO */
 .calendario-box,
 .citas-box {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border: 1px solid var(--color-primary);
     border-radius: 10px;
     padding: 25px;
@@ -208,7 +208,7 @@
 }
 
 .modal-content {
-    background: var(--color-secondary);
+    background: var(--color-secundary);
     border: 2px solid var(--color-primary);
     padding: 30px;
     border-radius: 8px;
@@ -252,7 +252,7 @@ footer.footer-barbero {
     width: 100%;
     padding: 40px 5% 30px;
     margin-top: 40px;
-    background: var(--color-secondary);
+    background: var(--color-secoudary);
     border-top: 1px solid rgba(197, 160, 89, 0.25);
     color: #fff;
 }

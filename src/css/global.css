@@ -6,14 +6,14 @@
 }
 
 body {
-    background: var(--color-secondary);
+    background: var(--color-secundary);
     color: #E5E5E5;
     overflow-x: hidden;
 }
 
 :root {
     --color-primary: #C5A059;
-    --color-secondary: #1A1A1A;
+    --color-secundary: #1A1A1A;
     --color-tertiary: #3D2B1F;
     --color-import: #aa833c;
     --color-sub: #c7a464;
@@ -132,7 +132,7 @@ footer {
     align-items: center;
     gap: 40px;
 
-    background: var(--color-secondary);
+    background: var(--color-secundary);
     border-top: 2px solid var(--color-primary);
 
     .footer-brand {

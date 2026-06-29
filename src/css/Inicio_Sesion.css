@@ -5,7 +5,7 @@
 ========================= */
 :root {
     --color-primary: #C5A059;
-    --color-secondary: #1A1A1A;
+    --color-secundary: #1A1A1A;
     --color-tertiary: #3D2B1F;
     --color-import: #aa833c;
     --color-sub: #c7a464;
@@ -49,7 +49,7 @@ header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -123,7 +123,7 @@ header .navbar {
     margin-top: 40px;
     padding: 40px;
     border-radius: 10px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -234,9 +234,9 @@ input:focus {
     height: 2px;
     margin: 15px 0;
     background: linear-gradient(90deg,
-            var(--color-secondary),
+            var(--color-secundary),
             rgb(67, 67, 67),
-            var(--color-secondary));
+            var(--color-secundary));
 }
 
 /* =========================
@@ -270,7 +270,7 @@ footer {
     align-items: center;
     gap: 40px;
 
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border-top: 2px solid var(--color-primary);
     height: 120px;
 }
